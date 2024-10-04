@@ -16,29 +16,32 @@ from func_seventh import proc_seventh
 from func_eighth import proc_eighth
 from func_ninth import proc_ninth
 from func_tenth import proc_tenth
-      
-#Double File X= 343 / Y= 230
-#Double File X= 343 / Y= 230
-#Double File X= 343 / Y= 230
 
+"""Esse é um projeto inicial de automatização de processos repetitivos em um setor operacional de recebimento de notas.
+O usuário recebe A NF e visualiza, acessa o sistema e descreve cada número de pedido, caso seja um pedido com 14 requisições, ele fará
+esse processo repetidamente 14 vezez, inserindo a numeração das NF e executando no sistema.
+"""
+## Nesse projeto eu pude começar os estudos na línguagem python e aos poucos melhorar o código e criar derivados.
+
+## Janela da interface
 janela = Tk()
-janela.title("WM [BETA] - Desenvolvido por Wescley Oliveira")
+janela.title("WM [BETA] - Desenvolvido por Wescley")
 janela.geometry("430x38")
 janela.resizable(False,False) 
-#janela['bg']= "#008" FF C0 CB
 janela['bg']= "#000000"
-##janela.iconbitmap("financ.png")
 
-## ------------------------ Question ------------------------ ##  01    FF 45 00    FF A5 00
+## ------------------------ Número de repetições ------------------------ ##  01    FF 45 00    FF A5 00
 texto_orientacao=Label(janela, text="Escolha o número de repetições",bg="#FFFF00", foreground="#000000")
 texto_orientacao.grid(column=10, row=1,  padx=7, pady=7)
 
-## ------------------------ Repetitions ------------------------## 02
+## ------------------------ Botões ------------------------## 02
+
+# Ao clicar na opção desejada, a função correta será chamada para realização da tarefa #
+
 texto_orientacao= Label(janela, text="1",bg="#FFFF00", foreground="#000000")
 texto_orientacao.grid(column=0, row=1, padx=3, pady=3)
 botao= Button(janela, text="1", command=proc_one, bg="#FFFF00", foreground="#000000")
 botao.grid(column=0, row=1, padx=3, pady=3)
-
 
 texto_orientacao= Label(janela, text="2")
 texto_orientacao.grid(column=1, row=1, padx=3, pady=3)
@@ -85,15 +88,4 @@ texto_orientacao.grid(column=9, row=1, padx=3, pady=3)
 botao= Button(janela, text="10", command=proc_tenth, bg="#FFFF00", foreground="#000000")
 botao.grid(column=9, row=1, padx=3, pady=3)
 
-
-## ------------------------ Dev ------------------------## 03
-#texto_orientacao= Label(janela, text="Desenvolvido para testes por Wescley.Oliveira",bg="#ff0",foreground="#000")
-#texto_orientacao.grid(column=10, row=10)
-
-#texto_orientacao= Label(janela, text="----------")
-#texto_orientacao.grid(column=0, row=3)
-
-
-#texto_resultado= Label(janela, text='')
-#texto_resultado.grid(column=0, row=2)
 janela.mainloop()
